@@ -1,6 +1,6 @@
 # Benyahia adel
 
-    ![Adel Benyahia](ImageProfil.png)
+![adel benyahia](ImageProfil.png)
 
 ## mes infos personnelles
 
