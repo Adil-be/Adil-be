@@ -17,13 +17,18 @@
     <title>Adel's lab</title>
   </head>
   <body class="">
-    <header class="MyContainer">
-      <div class="d-flex justify-content-between align-items-center">
+    <header class="d-flex align-items-center">
+      <div
+        class="d-flex justify-content-between align-items-center MyContainer"
+      >
         <div class="d-flex align-items-center gap-3 logo">
           <a href=""><img class="color" src="img/Logo.svg" alt="" /></a>
-          <h3>- Adel's Lab</h3>
+          <span>- Adel's Lab</span>
         </div>
-        <nav id="navDesktop" class="navDesktop d-lg-flex align-items-center">
+        <nav
+          id="navDesktop"
+          class="navDesktop d-lg-flex align-items-center ali"
+        >
           <ul class="d-flex align-items-center mx-5 my-0 p-0">
             <li><a href="">About</a></li>
             <li><a href="">Profil</a></li>
@@ -65,7 +70,7 @@
     <main class="container">
       <section id="banner" class="row">
         <div
-          class="d-flex flex-column justify-content-center align-items-start gap-5"
+          class="d-flex flex-column justify-content-center align-items-center align-items-md-start gap-5"
         >
           <div>
             <p class="mainColor">Bienvenue ! je suis</p>
@@ -79,7 +84,9 @@
             web, ceci est une brêve présentation de mon parcours.
           </p>
 
-          <a href="" class="myBtn py-4 px-5 fs-3">Voir mon portefolio</a>
+          <div>
+            <a href="" class="myBtn py-4 px-5 fs-3">Voir mon portefolio</a>
+          </div>
         </div>
       </section>
       <section id="about" class="container">
@@ -133,32 +140,55 @@
       </section>
       <section id="Profil">
         <h2>Mon parcours</h2>
-        <div id="Accordion" class="d-flex gap-5">
-          <div id="AccordionTab" class="d-flex flex-column">
-            <ul>
-              <li class="p-3">HumanBooster</li>
-              <li class="p-3">Web at Heart</li>
-              <li class="p-3">CCI formation</li>
+        <div id="Accordion" class="d-flex gap-sm-5 flex-column flex-sm-row">
+          <div id="AccordionTab" class="d-flex flex-row">
+            <ul class="d-flex flex-row flex-sm-column">
+              <li class="selected">HumanBooster</li>
+              <li>Web at Heart</li>
+              <li>CCI formation</li>
             </ul>
           </div>
           <div id="AccordionContent">
-            <h3>Formation web developpeur/ web mobile</h3>
-            <p>HUMAN BOOSTER</p>
+            <h3>
+              Formation web developpeur/ web mobile
+              <strong class="mainColor"> @HUMAN BOOSTER </strong>
+            </h3>
+            <p>2022-2023</p>
+
             <ul>
               <li>
-                <strong class="mainColor"
-                  >Développement front-end (343 h)</strong
-                ><br />Maquetter une application - Figma Réalisation d'une
-                interface utilisateur web statique et web dynamique -
-                JavaScript, Angular Réalisation d'une interface utilisateur avec
-                une solution de gestion de contenu ou e-commerce - WordPress
+                <h4 class="mainColor">Développement front-end</h4>
+                <div>
+                  Maquetter une application -<strong class="mainColor"
+                    >Figma
+                  </strong>
+                </div>
+
+                <div>
+                  Réalisation d'une interface web dynamique -<strong
+                    class="mainColor"
+                    >JavaScript, Angular
+                  </strong>
+                </div>
+                <div>
+                  Utlisation de solution de gestion de contenu (CMS) -
+                  <strong class="mainColor">WordPress </strong>
+                </div>
               </li>
               <li>
-                Développement back-end (420 h) <br />Conception /administration
-                de base de données - Langage SQL Développement de la partie
-                back-end d'une application web / web mobile - PHP, Symfony
-                Création de composants dans une application de gestion de
-                contenu ou e-commerce - Extensions sous Wordpress
+                <h4 class="mainColor">Développement back-end</h4>
+                <div>
+                  Conception /administration de base de données -
+                  <strong class="mainColor">Langage SQL</strong>
+                </div>
+                <div>
+                  Développement de la partie back-end -
+                  <strong class="mainColor">PHP, Symfony</strong>
+                </div>
+                <div>
+                  Création de composants CMS -
+                  <strong class="mainColor">Extensions Wordpre</strong>
+                </div>
               </li>
               <li></li>
             </ul>

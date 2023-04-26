@@ -36,6 +36,14 @@
   font-family: "semi-coder";
   src: url(../font/semi-coder/Semi-Coder-Regular.otf);
 }
+@font-face {
+  font-family: "fira";
+  src: url(../font/fira-code/FiraCode-Regular.otf);
+}
+@font-face {
+  font-family: "fira-medium";
+  src: url(../font/fira-code/FiraCode-Medium.otf);
+}
 
 /* **************
     variable
@@ -48,11 +56,13 @@
   --Black: 30, 30, 30;
   --darkGreen: 0, 59, 0;
   --lightGreen: 0, 147, 17;
-  --white: 255, 255, 255;
+  --white: #eee;
   --cyan: 0, 189, 149;
   --lightBlue: 37, 150, 190;
   --darkBlue: rgb(10, 25, 47);
-  --slime: #8892b0;
+  --slime: 136, 146, 176;
+
+  --headerHeight: 100px;
 }
 
 /* **************
@@ -67,12 +77,15 @@ body {
 }
 
 body {
-  font-family: "semi-coder";
+  /* font-family: "data-control"; */
+  font-family: "fira";
+  /* font-family: "semi-coder"; */
+
   line-height: 130%;
   font-weight: 400;
   background: rgb(var(--DarkGray));
-  font-size: 20px;
-  color: rgb(var(--white));
+  font-size: clamp(16px, 2vw, 18px);
+  color: var(--white);
 }
 
 h1 {
@@ -85,6 +98,20 @@ h2 {
   font-weight: 600;
   font-size: clamp(25px, 4vw, 50px);
   margin-bottom: 50px;
+}
+
+h3 {
+  font-family: "hypereality";
+  color: white;
+  font-weight: 600;
+  font-size: clamp(20px, 2vw, 30px);
+}
+
+h4 {
+  font-family: "hypereality";
+  /* font-family: "semi-coder"; */
+  font-weight: 600;
+  font-size: clamp(20px, 2vw, 50px);
 }
 
 nav li {
@@ -151,7 +178,7 @@ header {
   background-color: rgba(var(--DarkGray), 0.5);
   backdrop-filter: blur(15px);
   position: fixed;
-  padding: 30px 0;
+  height: var(--headerHeight);
   top: 0;
   left: 0;
   right: 0;
@@ -282,7 +309,8 @@ section:not(#banner) h2:before {
   ************** */
 
 #banner {
-  min-height: 100vh;
+  /* margin-top: var(--headerHeight); */
+  height: calc(100vh - var(--headerHeight));
 }
 #banner p {
   max-width: 550px;
@@ -303,11 +331,68 @@ section:not(#banner) h2:before {
   width: 100%;
 }
 
+/* *************
+    Profil
+  ************** */
+
+#Profil #AccordionContent {
+  padding: 10px;
+}
+#Profil #AccordionContent h3 {
+  text-decoration: 2px underline rgb(var(--cyan));
+}
+
+#Profil #AccordionContent li {
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+#Profil #AccordionTab li {
+  cursor: pointer;
+  width: max-content;
+  padding: 10px;
+}
+
+#Profil #AccordionTab li.selected,
+#Profil #AccordionTab li:hover {
+  background-color: rgb(var(--LightGray));
+  color: rgb(var(--cyan));
+}
+@media (max-width: 571px) {
+  #Profil #AccordionTab li.selected,
+  #Profil #AccordionTab li:hover {
+    border-bottom: 1px solid rgb(var(--cyan));
+  }
+}
+
+@media (min-width: 571px) {
+  #Profil #AccordionTab li {
+    border-left: 1px solid rgb(var(--slime));
+  }
+
+  #Profil #AccordionTab li.selected,
+  #Profil #AccordionTab li:hover {
+    background-color: rgb(var(--LightGray));
+    border-left: 1px solid rgb(var(--cyan));
+    color: rgb(var(--cyan));
+  }
+}
+
+#Profil p {
+  margin-bottom: 25px;
+}
+
 @media (max-width: 991px) {
   #burger {
     display: block;
   }
   .navDesktop {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #banner {
+    text-align: center;
   }
 }
