@@ -10,39 +10,39 @@
 ***************** */
 @font-face {
   font-family: "Adam-Medium";
-  src: url(../font/Adam/Adam-Medium.ttf);
+  src: url(../fonts/Adam/Adam-Medium.ttf);
 }
 @font-face {
   font-family: "Adam-Light";
-  src: url(../font/Adam/Adam-Light.ttf);
+  src: url(../fonts/Adam/Adam-Light.ttf);
 }
 @font-face {
   font-family: "Adam-Bold";
-  src: url(../font/Adam/Adam-Bold.ttf);
+  src: url(../fonts/Adam/Adam-Bold.ttf);
 }
 @font-face {
   font-family: "Codex-Cold-Rgular";
-  src: url(../font/Codex/Codec-Cold-Regular-trial.ttf);
+  src: url(../fonts/Codex/Codec-Cold-Regular-trial.ttf);
 }
 @font-face {
   font-family: "Hypereality";
-  src: url(../font/Hyper/Hypereality\ Sans\ Serif.ttf);
+  src: url(../fonts/Hyper/Hypereality\ Sans\ Serif.ttf);
 }
 @font-face {
   font-family: "data-control";
-  src: url(../font/data-control/data-latin.ttf);
+  src: url(../fonts/data-control/data-latin.ttf);
 }
 @font-face {
   font-family: "semi-coder";
-  src: url(../font/semi-coder/Semi-Coder-Regular.otf);
+  src: url(../fonts/semi-coder/Semi-Coder-Regular.otf);
 }
 @font-face {
   font-family: "fira";
-  src: url(../font/fira-code/FiraCode-Regular.otf);
+  src: url(../fonts/fira-code/FiraCode-Regular.otf);
 }
 @font-face {
   font-family: "fira-medium";
-  src: url(../font/fira-code/FiraCode-Medium.otf);
+  src: url(../fonts/fira-code/FiraCode-Medium.otf);
 }
 
 /* **************
@@ -62,7 +62,7 @@
   --darkBlue: rgb(10, 25, 47);
   --slime: 136, 146, 176;
 
-  --headerHeight: 100px;
+  --headerHeight: 80px;
 }
 
 /* **************
@@ -111,7 +111,7 @@ h4 {
   font-family: "hypereality";
   /* font-family: "semi-coder"; */
   font-weight: 600;
-  font-size: clamp(20px, 2vw, 50px);
+  font-size: clamp(20px, 2vw, 25px);
 }
 
 nav li {
@@ -152,15 +152,17 @@ a {
 }
 
 .myBtn {
+  position: relative;
   display: inline-block;
-  box-sizing: border-box;
-  border: 1px solid rgb(var(--cyan)) !important;
+  border: 3px solid rgb(var(--cyan));
+  border-radius: 2px;
   color: rgb(var(--cyan)) !important;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .myBtn:hover {
   background-color: rgba(var(--cyan), 0.3);
+  transform: translate(0, 10%);
 }
 
 .mainColor {
@@ -170,28 +172,34 @@ a {
   color: rgb(var(--lightBlue)) !important;
 }
 
+i {
+  color: rgb(var(--white));
+  font-size: 3rem;
+}
+
 /* **************
    HEADER
 **************** */
 
 header {
-  background-color: rgba(var(--DarkGray), 0.5);
-  backdrop-filter: blur(15px);
+  background-color: rgba(var(--DarkGray), 0.8);
+  backdrop-filter: blur(20px);
   position: fixed;
   height: var(--headerHeight);
+  box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
   right: 0;
 }
 
-header div img {
+.logo img {
   width: 50px;
   height: 50px;
   filter: invert(56%) sepia(14%) saturate(7369%) hue-rotate(130deg)
     brightness(95%) contrast(101%);
 }
 
-header .logo {
+.logo {
   font-size: 2rem;
   color: rgb(var(--cyan));
 }
@@ -291,9 +299,10 @@ header .logo {
   ************** */
 section:not(#banner) {
   max-width: 1000px;
+  min-height: 700px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 100px;
+  padding: 100px 0;
 }
 section:not(#banner) h2:before {
   content: "\25A2";
@@ -309,7 +318,7 @@ section:not(#banner) h2:before {
   ************** */
 
 #banner {
-  /* margin-top: var(--headerHeight); */
+  margin-top: var(--headerHeight);
   height: calc(100vh - var(--headerHeight));
 }
 #banner p {
@@ -319,10 +328,6 @@ section:not(#banner) h2:before {
     A PROPOS
   ************** */
 
-#about {
-  max-width: 1000px;
-  margin-left: auto;
-}
 #about p {
   margin-bottom: 20px;
 }
@@ -358,14 +363,14 @@ section:not(#banner) h2:before {
   background-color: rgb(var(--LightGray));
   color: rgb(var(--cyan));
 }
-@media (max-width: 571px) {
+@media (max-width: 768px) {
   #Profil #AccordionTab li.selected,
   #Profil #AccordionTab li:hover {
     border-bottom: 1px solid rgb(var(--cyan));
   }
 }
 
-@media (min-width: 571px) {
+@media (min-width: 768px) {
   #Profil #AccordionTab li {
     border-left: 1px solid rgb(var(--slime));
   }
@@ -382,6 +387,57 @@ section:not(#banner) h2:before {
   margin-bottom: 25px;
 }
 
+/* *************
+    PROJECT
+  ************** */
+#project {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+#project #projectImg {
+  margin: auto;
+  width: 60%;
+}
+#project #projectContent {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 40%;
+}
+#project #projectContent p {
+  padding: 20px;
+  background-color: var(--darkBlue);
+}
+
+/* *************
+    FOOTER
+  ************** */
+footer {
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  #project.reverse {
+    flex-direction: row-reverse;
+  }
+  #project.reverse #projectContent {
+    text-align: right;
+    align-items: end;
+  }
+}
+
+#project #projectImg img {
+  width: 100%;
+}
+
+/* *************
+    MEDIA QUERRIES
+  ************** */
+
 @media (max-width: 991px) {
   #burger {
     display: block;
@@ -394,5 +450,20 @@ section:not(#banner) h2:before {
 @media (max-width: 768px) {
   #banner {
     text-align: center;
+  }
+  #project {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  #project #projectContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #project #projectImg {
+    width: 80%;
   }
 }

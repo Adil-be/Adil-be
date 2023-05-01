@@ -12,6 +12,7 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/menu.js"></script>
     <title>Adel's lab</title>
@@ -22,7 +23,7 @@
         class="d-flex justify-content-between align-items-center MyContainer"
       >
         <div class="d-flex align-items-center gap-3 logo">
-          <a href=""><img class="color" src="img/Logo.svg" alt="" /></a>
+          <a href=""><img src="img/Logo.svg" alt="" /></a>
           <span>- Adel's Lab</span>
         </div>
         <nav
@@ -89,7 +90,7 @@
           </div>
         </div>
       </section>
-      <section id="about" class="container">
+      <section id="about">
         <h2>A propos</h2>
         <div class="row my-5">
           <div class="col-12 col-md-7">
@@ -140,9 +141,9 @@
       </section>
       <section id="Profil">
         <h2>Mon parcours</h2>
-        <div id="Accordion" class="d-flex gap-sm-5 flex-column flex-sm-row">
+        <div id="Accordion" class="d-flex gap-md-5 flex-column flex-md-row">
           <div id="AccordionTab" class="d-flex flex-row">
-            <ul class="d-flex flex-row flex-sm-column">
+            <ul class="d-flex flex-row flex-md-column">
               <li class="selected">HumanBooster</li>
               <li>Web at Heart</li>
               <li>CCI formation</li>
@@ -196,25 +197,93 @@
         </div>
       </section>
       <section id="Portefolio">
+        <h2>Mes realisations</h2>
+        <div id="project" class="reverse">
+          <div id="projectContent">
+            <h3 class="mainColor">Front End mentor Form</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              officia eveniet quasi minus libero nulla magnam illum asperiores
+              inventore,
+            </p>
+            <ul class="d-flex gap-4">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <ul class="d-flex gap-4">
+              <li>
+                <a href=""><i class="bi bi-github"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="bi bi-box-arrow-up-right"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div id="projectImg">
+            <a href="">
+              <div class="imgWrapper">
+                <img src="img/project/cross-fit.jpg" alt="" />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div id="project">
+          <div id="projectContent">
+            <h3 class="mainColo">Front End mentor form</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              officia eveniet quasi minus libero nulla magnam illum asperiores
+              inventore,
+            </p>
+            <ul class="d-flex gap-4">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <ul class="d-flex gap-4">
+              <li>
+                <a href=""><i class="bi bi-github"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="bi bi-box-arrow-up-right fa-5x"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div id="projectImg" class="">
+            <a href="">
+              <div class="imgWrapper">
+                <img src="img/project/front-end-mentor-form.jpg" alt="" />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="text-center"><a href="" class="myBtn">Voir tout</a></div>
+      </section>
+      <section id="contact" class="text-center">
+        <h2>Contact</h2>
+
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          maiores iste fugiat sint ad quidem voluptatum, velit delectus nemo
-          provident quis obcaecati placeat incidunt pariatur recusandae labore
-          asperiores id adipisci.
+          Actuellement en recherche de stage debut septembre <br />
+          Ouvert à la discussion, n'hesiter pas dire bonjour. <br />Pour tout
+          echange mon mail est a disposition ci-desous.<br />&#127850;
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          maiores iste fugiat sint ad quidem voluptatum, velit delectus nemo
-          provident quis obcaecati placeat incidunt pariatur recusandae labore
-          asperiores id adipisci.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          maiores iste fugiat sint ad quidem voluptatum, velit delectus nemo
-          provident quis obcaecati placeat incidunt pariatur recusandae labore
-          asperiores id adipisci.
-        </p>
+        <a href="" class="myBtn">E-mail</a>
       </section>
     </main>
+    <footer class="text-center">
+      <ul class="d-flex justify-content-center gap-4">
+        <li>
+          <a href=""><i class="bi bi-envelope-at"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="bi bi-github"></i></a>
+        </li>
+      </ul>
+      <p class="secondaryColor m-0">- coder par Adel B -</p>
+    </footer>
   </body>
 </html>
