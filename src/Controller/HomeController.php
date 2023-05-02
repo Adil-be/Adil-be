@@ -7,9 +7,9 @@ use Controller\AbstractController;
 class HomeController extends AbstractController
 {
 
-    public function getContent(): array
+    public function getContent(): ?array
     {
-        return ['test' => 'empty'];
+        return ['pageTitle' => $this->getPageTitle()];
     }
     public function getFileName(): string
     {
@@ -17,7 +17,7 @@ class HomeController extends AbstractController
     }
     public function getPageTitle(): string
     {
-        return "adel's Lab";
+        return "Adel's Lab";
     }
 
 }

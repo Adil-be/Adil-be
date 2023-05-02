@@ -9,7 +9,7 @@ class PortefolioController extends AbstractController
 
     public function getContent(): ?array
     {
-        return ['test' => 'empty'];
+        return ['pageTitle' => $this->getPageTitle()];
     }
     public function getFileName(): string
     {

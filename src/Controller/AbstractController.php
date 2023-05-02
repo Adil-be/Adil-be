@@ -22,15 +22,19 @@ abstract class AbstractController
     {
         session_start();
         ob_start();
-        include_once 'includes/header.php';
+
+        $param = $this->getContent();
+        extract($param);
+
+        include_once 'src/View/layout/header.php';
 
         include_once 'src/View/' . $this->getFileName() . '.php';
 
-        include_once 'includes/footer.php';
+        include_once 'src/View/layout/footer.php';
 
         echo ob_get_clean();
     }
-    abstract public function getContent();
+    abstract public function getContent(): ?array;
     abstract public function getFileName(): ?string;
     abstract public function getPageTitle(): ?string;
 

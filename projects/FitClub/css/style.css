@@ -1,0 +1,374 @@
+@import "normalize.css";
+@import "base.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+/* ****************
+    STYLE GLOBAL
+******************* */
+
+:root {
+  --fontFam: "Montserrat", sans-serif;
+  --mainColor: 124, 40, 99;
+  --shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: var(--fontFam);
+}
+
+h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: italic;
+}
+iframe {
+  display: block;
+}
+/* ****************
+    CLASS GLOBAL
+******************* */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff !important;
+  background-color: rgb(var(--mainColor));
+}
+
+.fa-solid.fa-bars {
+  display: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ****************
+    BENEFIT
+******************* */
+#benefit ul {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0px;
+}
+#benefit ul li {
+  width: calc(100% / 3);
+  padding: 50px;
+  text-align: center;
+}
+
+#benefit ul li img {
+  width: 50px;
+}
+
+#benefit ul li h2 {
+  font-size: 20px;
+}
+@media screen and (min-width: 992px) {
+  #benefit ul li:nth-last-of-type(2n) {
+    background-color: rgba(128, 128, 128, 0.2);
+  }
+}
+
+/* ****************
+    FOOTER
+******************* */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  background: linear-gradient(rgb(var(--mainColor)) 20px, black 20px);
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .container aside,
+footer .container address {
+  width: 30%;
+}
+footer .container form {
+  width: 40%;
+  box-shadow: var(--shadow);
+}
+
+footer .container > aside,
+footer .container address {
+  color: #fff;
+  padding: 20px;
+}
+footer .container > aside {
+  text-align: right;
+}
+
+footer address ul li {
+  display: flex;
+  gap: 20px;
+  align-items: baseline;
+}
+
+footer address ul li h3 {
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+footer address a i {
+  color: rgb(var(--mainColor));
+  margin-right: 10px;
+  font-size: 24px;
+}
+footer .container aside ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+footer .container aside img {
+  width: 48px;
+}
+
+footer form {
+  margin-top: -100px;
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+footer form h2 {
+  text-transform: uppercase;
+}
+
+footer form input {
+  width: 100%;
+  margin: 50px 0;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+footer form button.btn {
+  padding: 20px;
+}
+
+/* ****************
+    HEADER
+******************* */
+
+header {
+  background: linear-gradient(
+      to right,
+      rgba(124, 40, 99, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../img/fitness.jpg) top center fixed;
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+header nav {
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav img {
+  width: 50px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-flow: row-reverse;
+}
+
+header div {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 300px;
+}
+
+header div p {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* ****************
+    INSCRIPTION
+******************* */
+#inscription {
+  padding: 100px 0;
+  color: #fff;
+  background: linear-gradient(
+      to right,
+      rgba(var(--mainColor), 0.3) 60%,
+      black 60%
+    ),
+    url(../img/crossfit.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+#inscription article {
+  width: 40%;
+  padding: 30px;
+  margin: 0 0 0px 65%;
+}
+
+#inscription article h2 {
+  margin-left: -100px;
+}
+
+/* ****************
+    OBJECTIF
+******************* */
+#objectif {
+  text-align: center;
+}
+
+#objectif ul {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 100px 0 0;
+}
+#objectif ul li {
+  width: 25%;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  border-right: 1px solid rgba(128, 128, 128, 0.2);
+  padding: 50px;
+}
+#objectif ul li:last-of-type {
+  border-right: none;
+}
+/* ****************
+    PROGRAMME
+******************* */
+#programme {
+  position: relative;
+  top: -100px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+#programme a {
+  width: 50%;
+  height: 300px;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  text-align: center;
+  color: #fff;
+}
+
+#programme a:nth-of-type(1) {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/fitnessman.jpg) center center;
+  background-size: cover;
+}
+#programme a:nth-of-type(2) {
+  background: linear-gradient(rgba(124, 40, 99, 0.5), rgba(124, 40, 99, 0.5)),
+    url(../img/fitnesswoman.jpg) center center;
+  background-size: cover;
+}
+
+#programme a h2,
+#programme a p {
+  margin: 0px;
+}
+
+#programme a h2 {
+  text-transform: uppercase;
+}
+
+/* ****************
+    MEDIA QUERRIES
+******************* */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 100%;
+  }
+  #benefit ul li {
+    width: 50%;
+    background-color: #fff;
+  }
+  #benefit ul li:nth-of-type(4n + 2),
+  #benefit ul li:nth-of-type(4n + 3) {
+    background-color: rgba(128, 128, 128, 0.2);
+  }
+
+  footer .container form {
+    flex-basis: 1.5;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header nav .fa-solid.fa-bars {
+    display: block;
+  }
+
+  header nav {
+    background-color: var(--mainColor);
+  }
+
+  header nav ul li {
+    display: none;
+  }
+
+  #programme a {
+    width: 100%;
+  }
+
+  #objectif ul li {
+    width: 50%;
+    border-bottom: none;
+  }
+  #objectif ul li:nth-last-of-type(odd) {
+    border-right: none;
+  }
+
+  #inscription {
+    background: black;
+    padding: 50px 0;
+  }
+  #inscription article {
+    width: 100%;
+    margin: 0;
+  }
+  #inscription article h2 {
+    margin-left: 0;
+  }
+  #benefit ul li {
+    width: 100%;
+  }
+  #benefit ul li:nth-last-of-type(2n) {
+    background-color: rgba(128, 128, 128, 0.2);
+  }
+  footer .container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  footer .container > * {
+    width: 100% !important;
+  }
+  footer form {
+    margin-top: -50px;
+    order: -1;
+  }
+  footer .container > aside {
+    text-align: center;
+  }
+  footer .container > aside ul {
+    justify-content: center;
+  }
+}

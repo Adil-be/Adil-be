@@ -2,7 +2,8 @@
 let zone1 = document.querySelector("#zone1");
 let overlay = document.querySelector("#overlay");
 let zone2 = document.querySelector("#zone2");
-let header = document.querySelector("header");
+let selectContainer = document.querySelector("#selectContainer");
+console.log(selectContainer);
 
 // tableau d'objets
 
@@ -10,49 +11,58 @@ let header = document.querySelector("header");
 let elements = [
   {
     image: "FEM_Rock_Paper_Scissor.jpg",
-    nom: "FEM challenge : Rock Paper Scissors",
-    categories: ["Javascript", "Html", "Css"],
+    path: "projects/rock-paper-scissors-master",
+    nom: "FEM : Rock Paper Scissors",
+    categories: ["Js", "Html", "Css"],
     description: "lorem ipsum ......",
   },
   {
     image: "FEM-Form.jpg",
-    nom: "FEM challenge : Creation Formulaire",
-    categories: ["Javascript", "Html", "Css"],
+    path: "projects/intro-component-with-signup-form-master",
+    nom: "FEM : Creation Formulaire",
+    categories: ["Js", "Html", "Css"],
     description: "lorem ipsum ......",
   },
   {
     image: "Cross_Fit.jpg",
+    path: "projects/FitClub",
     nom: "Front page site crossFit",
     categories: ["Html", "Css"],
     description: "lorem ipsum ......",
   },
   {
     image: "FEM_Product_Card.jpg",
-    nom: "FEM challenge : Creation d'une fiche produit",
+    path: "projects/product-preview-card-component-main",
+    nom: "FEM : Creation d'une fiche produit",
     categories: ["Html", "Css"],
     description: "lorem ipsum ......",
   },
   {
     image: "Cornfood.jpg",
+    path: "projects/Cornfood",
     nom: "Front page site e-commerce",
     categories: ["Html", "Css"],
     description: "lorem ipsum ......",
   },
   {
     image: "FEM_PreviewCard.png",
-    nom: "FEM challenge : Creation d'une carte NFT",
+    path: "projects/nft-preview-card",
+    nom: "FEM : Creation d'une carte NFT",
+
     categories: ["Html", "Css"],
     description: "lorem ipsum ......",
   },
   {
     image: "FEM_ProfilCard.jpg",
-    nom: "FEM challenge : Creation d'une fiche profil",
+    path: "projects/Profile-card-component-main",
+    nom: "FEM : Creation d'une fiche profil",
     categories: ["Html", "Css"],
     description: "lorem ipsum ......",
   },
   {
     image: "FEM_QrCode.png",
-    nom: "FEM challenge : Creation d'un QrCode",
+    path: "projects/qr-code",
+    nom: "FEM : Creation d'un QrCode",
     categories: ["Html", "Css"],
     description: "lorem ipsum ......",
   },
@@ -74,7 +84,7 @@ function createVignettes(listElements) {
     let vignette = document.createElement("figure");
     vignette.classList = "vignette";
     vignette.id = `v${i}`;
-    vignette.innerHTML = `<img src="img/project/${element.image}"
+    vignette.innerHTML = `<img src="assets/img/project/${element.image}"
     alt="image ${element.nom}">
     <figcaption>${element.nom}</figcaption>`;
 
@@ -89,20 +99,33 @@ function createVignettes(listElements) {
 // cette fonction prend un object en parametre. le but de cette fonction est d'afficher l'image en bg ainsi que les prorieté dans l'overlay de maniere dynamique
 
 function afficherImage(objetImage) {
-  zone1.style.backgroundImage = `url(img/project/${objetImage.image})`;
+  zone1.style.backgroundImage = `url(assets/img/project/${objetImage.image})`;
   let html = "";
   // on affiche toutes les propriete
-  for (let property in objetImage) {
-    if (property == "prix") {
-      //si c'est une proprieté "prix" on ajoute le signe "$"
-      html += `<p>${property}<br><span class ="propertyValue">${objetImage[property]} $</span>`;
-    } else if (property == "image") {
-      // le lien src n'a pas d'interet
-      continue;
-    } else {
-      html += `<p>${property}<br> <span class ="propertyValue">${objetImage[property]}</span>`;
+  let name = `<h3>${objetImage.nom}</h3>`;
+  let description = `<p>${objetImage.description}</p>`;
+  let categories = `<ul class="d-flex gap-3">`;
+  let color;
+  objetImage.categories.forEach((categorie) => {
+    switch (categorie) {
+      case "Js":
+        color = "yellow";
+        break;
+      case "Html":
+        color = "orange";
+        break;
+      case "Css":
+        color = "blue";
+        break;
+      case "Bootstrap":
+        color = "red";
+        break;
     }
-  }
+    categories += `<li class=${color}>${categorie}</li>`;
+  });
+  categories += `</ul>`;
+  html = name + description + categories;
+  html += `<a href=${objetImage.path} target="_blank" class="myBtn">Visiter</a>`;
   overlay.innerHTML = html;
 }
 
@@ -118,7 +141,7 @@ createSelectHtmlElement();
 function createSelectHtmlElement() {
   // on creer la balise
   let selectCategory = document.createElement("select");
-  console.log("selectCategory ", selectCategory);
+  selectCategory.classList.add("mainColor");
   selectCategory.id = "selectCategory";
 
   // on recupere dinamiquement la list de toute les categories possible dans elements
@@ -126,7 +149,7 @@ function createSelectHtmlElement() {
 
   // on creer autant d'option qu'il y a de categories
 
-  let html = `<option value=""> tout afficher</option>`;
+  let html = `<option value="">Tout voir</option>`;
   categories.forEach((category) => {
     html += `<option value="${category}">${category}</option>`;
   });
@@ -134,7 +157,7 @@ function createSelectHtmlElement() {
 
   // on place un ecouteur d'evement au changement de valeur du select en vue d'afficher les vignettes corespondantes a la categorie selectionner
   selectCategory.onchange = MAJvignette;
-  header.appendChild(selectCategory);
+  selectContainer.appendChild(selectCategory);
 }
 
 function MAJvignette() {
@@ -144,7 +167,7 @@ function MAJvignette() {
       // ceci correspond à l'option pas defaut tt afficher
       return true;
     } else {
-      return selectCategory.value == element.categorie;
+      return element.categories.includes(selectCategory.value);
     }
   });
 
@@ -164,9 +187,11 @@ function recoverCategorie(tabObject) {
   let categorie = [];
   tabObject.forEach((object) => {
     // si la cagetorie n'exite pas deja on l'inclue dans le tableau
-    if (!categorie.includes(object.categorie)) {
-      categorie.push(object.categorie);
-    }
+    object.categories.forEach((element) => {
+      if (!categorie.includes(element)) {
+        categorie.push(element);
+      }
+    });
   });
   return categorie;
 }
