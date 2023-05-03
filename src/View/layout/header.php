@@ -11,7 +11,7 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/bootstrap-icons.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script defer src="js/menu.js"></script>
+    <script defer src="assets/js/menu.js"></script>
     <title>
         <?= $pageTitle ?>
     </title>

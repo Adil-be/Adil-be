@@ -202,6 +202,7 @@ header {
   position: fixed;
   height: var(--headerHeight);
   box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.5);
+  z-index: 5;
   top: 0;
   left: 0;
   right: 0;
@@ -485,7 +486,13 @@ footer {
   background-color: rgb(var(--DarkGray)) !important;
   border: 2px solid rgb(var(--cyan));
 }
+#zone1Container {
+  position: relative;
+  margin-bottom: 50px;
+  width: 100%;
+}
 #zone1 {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: end;
@@ -493,8 +500,28 @@ footer {
   background-size: cover;
   background-position: center;
 }
-#zone1 #overlay {
+#zone1 > div {
+  display: none;
+}
+#zone1:hover > div {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(var(--cyan), 0.3);
+}
+
+#zone1Container #overlay {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
   padding: 20px;
   flex-direction: column;
   justify-content: center;
@@ -516,6 +543,9 @@ footer {
   justify-content: center;
   gap: 20px;
   padding: 20px 0;
+}
+#zone2 figcaption:hover {
+  color: rgb(var(--cyan));
 }
 
 /* *************
@@ -549,5 +579,14 @@ footer {
   }
   #project #projectImg {
     width: 80%;
+  }
+  #zone1Container #overlay {
+    position: relative;
+    align-items: center;
+    background: inherit;
+    width: 100%;
+  }
+  .vignette {
+    width: 200px;
   }
 }

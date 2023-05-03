@@ -6,10 +6,13 @@
             maxime blanditiis consectetur, et voluptatem quas tempore atque exercitationem. Perspiciatis accusantium eos
             impedit quasi cumque?</p>
         <div class="d-flex justify-content-end my-4" id="selectContainer"></div>
-        <div id="zone1">
+        <div id="zone1Container">
+            <div id="zone1">
+                <div>a<i class="bi bi-eye-fill"></i></div>
+            </div>
             <div id="overlay"></div>
         </div>
     </section>
     <section id="zone2"></section>
 </main>
-<script src="assets/js/portefolio.js"></script>
+<script type="module" src="assets/js/portefolio.js"></script>

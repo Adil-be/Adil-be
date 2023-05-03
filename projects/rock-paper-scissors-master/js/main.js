@@ -38,7 +38,6 @@ PulsingCirle.innerHTML = `<span style="--i:0;"></span>
 <span style="--i:3;"></span>`;
 
 let maxoption = option.length;
-console.log(maxoption);
 
 // APPEL DOM
 let sectionGame = document.querySelector("#game");

@@ -4,6 +4,7 @@
             <div>
                 <p class="mainColor">Bienvenue ! je suis</p>
                 <h1>
+
                     Adel Benyahia.<br />
                     Developpeur Web Junior.
                 </h1>
@@ -12,7 +13,6 @@
                 Bienvenue sur mon site, débutant dans l'univers du développement
                 web, ceci est une brêve présentation de mon parcours.
             </p>
-
             <div>
                 <a href="?page=portefolio" class="myBtn py-4 px-5 fs-3">Voir mon portefolio</a>
             </div>
@@ -107,66 +107,8 @@
     </section>
     <section id="Portefolio">
         <h2>Mes realisations</h2>
-        <div id="project" class="reverse">
-            <div id="projectContent">
-                <h3 class="mainColor">Front End mentor Form</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-                    officia eveniet quasi minus libero nulla magnam illum asperiores
-                    inventore,
-                </p>
-                <ul class="d-flex gap-4">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
-                <ul class="d-flex gap-4">
-                    <li>
-                        <a href=""><i class="bi bi-github"></i></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="bi bi-box-arrow-up-right"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div id="projectImg">
-                <a href="">
-                    <div class="imgWrapper">
-                        <img src="img/project/cross-fit.jpg" alt="" />
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div id="project">
-            <div id="projectContent">
-                <h3 class="mainColo">Front End mentor form</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-                    officia eveniet quasi minus libero nulla magnam illum asperiores
-                    inventore,
-                </p>
-                <ul class="d-flex gap-4">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
-                <ul class="d-flex gap-4">
-                    <li>
-                        <a href=""><i class="bi bi-github"></i></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="bi bi-box-arrow-up-right fa-5x"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div id="projectImg" class="">
-                <a href="">
-                    <div class="imgWrapper">
-                        <img src="img/project/front-end-mentor-form.jpg" alt="" />
-                    </div>
-                </a>
-            </div>
-        </div>
+        <script type="module" src="assets/js/projects.js"></script>
+        <div id="ProjectContainer"></div>
         <div class="text-center"><a href="?page=portefolio" class="myBtn">Voir tout</a></div>
     </section>
     <section id="contact" class="text-center">

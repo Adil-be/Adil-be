@@ -1,0 +1,58 @@
+export let elements = [
+  {
+    image: "assets/img/project/FEM_Rock_Paper_Scissor.jpg",
+    path: "projects/rock-paper-scissors-master",
+    nom: "FEM : Rock Paper Scissors",
+    categories: ["Js", "Html", "Css"],
+    description: "lorem ipsum ......",
+  },
+  {
+    image: "assets/img/project/FEM-Form.jpg",
+    path: "projects/intro-component-with-signup-form-master",
+    nom: "FEM : Creation Formulaire",
+    categories: ["Js", "Html", "Css"],
+    description: "lorem ipsum ......",
+  },
+  {
+    image: "assets/img/project/Cross_Fit.jpg",
+    path: "projects/FitClub",
+    nom: "Front page site crossFit",
+    categories: ["Html", "Css"],
+    description: "lorem ipsum ......",
+  },
+  {
+    image: "assets/img/project/FEM_Product_Card.jpg",
+    path: "projects/product-preview-card-component-main",
+    nom: "FEM : Creation d'une fiche produit",
+    categories: ["Html", "Css"],
+    description: "lorem ipsum ......",
+  },
+  {
+    image: "assets/img/project/Cornfood.jpg",
+    path: "projects/Cornfood",
+    nom: "Front page site e-commerce",
+    categories: ["Html", "Css"],
+    description: "lorem ipsum ......",
+  },
+  {
+    image: "assets/img/project/FEM_PreviewCard.png",
+    path: "projects/nft-preview-card",
+    nom: "FEM : Creation d'une carte NFT",
+    categories: ["Html", "Css"],
+    description: "lorem ipsum ......",
+  },
+  {
+    image: "assets/img/project/FEM_ProfilCard.jpg",
+    path: "projects/Profile-card-component-main",
+    nom: "FEM : Creation d'une fiche profil",
+    categories: ["Html", "Css"],
+    description: "lorem ipsum ......",
+  },
+  {
+    image: "assets/img/project/FEM_QrCode.png",
+    path: "projects/qr-code",
+    nom: "FEM : Creation d'un QrCode",
+    categories: ["Html", "Css"],
+    description: "lorem ipsum ......",
+  },
+];

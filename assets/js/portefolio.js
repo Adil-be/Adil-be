@@ -1,72 +1,11 @@
+import { elements } from "./variables.js";
+
 // varaible global
 let zone1 = document.querySelector("#zone1");
 let overlay = document.querySelector("#overlay");
 let zone2 = document.querySelector("#zone2");
 let selectContainer = document.querySelector("#selectContainer");
 console.log(selectContainer);
-
-// tableau d'objets
-
-// je me suis permis de creer des prix aleatoire sur certain objets (les 2 dernier de chaques catégories)
-let elements = [
-  {
-    image: "FEM_Rock_Paper_Scissor.jpg",
-    path: "projects/rock-paper-scissors-master",
-    nom: "FEM : Rock Paper Scissors",
-    categories: ["Js", "Html", "Css"],
-    description: "lorem ipsum ......",
-  },
-  {
-    image: "FEM-Form.jpg",
-    path: "projects/intro-component-with-signup-form-master",
-    nom: "FEM : Creation Formulaire",
-    categories: ["Js", "Html", "Css"],
-    description: "lorem ipsum ......",
-  },
-  {
-    image: "Cross_Fit.jpg",
-    path: "projects/FitClub",
-    nom: "Front page site crossFit",
-    categories: ["Html", "Css"],
-    description: "lorem ipsum ......",
-  },
-  {
-    image: "FEM_Product_Card.jpg",
-    path: "projects/product-preview-card-component-main",
-    nom: "FEM : Creation d'une fiche produit",
-    categories: ["Html", "Css"],
-    description: "lorem ipsum ......",
-  },
-  {
-    image: "Cornfood.jpg",
-    path: "projects/Cornfood",
-    nom: "Front page site e-commerce",
-    categories: ["Html", "Css"],
-    description: "lorem ipsum ......",
-  },
-  {
-    image: "FEM_PreviewCard.png",
-    path: "projects/nft-preview-card",
-    nom: "FEM : Creation d'une carte NFT",
-
-    categories: ["Html", "Css"],
-    description: "lorem ipsum ......",
-  },
-  {
-    image: "FEM_ProfilCard.jpg",
-    path: "projects/Profile-card-component-main",
-    nom: "FEM : Creation d'une fiche profil",
-    categories: ["Html", "Css"],
-    description: "lorem ipsum ......",
-  },
-  {
-    image: "FEM_QrCode.png",
-    path: "projects/qr-code",
-    nom: "FEM : Creation d'un QrCode",
-    categories: ["Html", "Css"],
-    description: "lorem ipsum ......",
-  },
-];
 
 createVignettes(elements);
 
@@ -81,10 +20,12 @@ createVignettes(elements);
 function createVignettes(listElements) {
   listElements.forEach(function (element, i) {
     // on creé la balise ainsi que le HTML
+    let linkWrapper = document.createElement("a");
+    linkWrapper.href = "#zone1";
     let vignette = document.createElement("figure");
     vignette.classList = "vignette";
     vignette.id = `v${i}`;
-    vignette.innerHTML = `<img src="assets/img/project/${element.image}"
+    vignette.innerHTML = `<img src="${element.image}"
     alt="image ${element.nom}">
     <figcaption>${element.nom}</figcaption>`;
 
@@ -92,14 +33,16 @@ function createVignettes(listElements) {
     vignette.onclick = () => {
       afficherImage(element);
     };
-    zone2.appendChild(vignette);
+    linkWrapper.appendChild(vignette);
+    zone2.appendChild(linkWrapper);
   });
 }
 
 // cette fonction prend un object en parametre. le but de cette fonction est d'afficher l'image en bg ainsi que les prorieté dans l'overlay de maniere dynamique
 
 function afficherImage(objetImage) {
-  zone1.style.backgroundImage = `url(assets/img/project/${objetImage.image})`;
+  zone1.style.backgroundImage = `url(${objetImage.image})`;
+  zone1.innerHTML = `<div><a href="${objetImage.path}" target="_blank"><i class="bi bi-eye-fill"></i></a></div>`;
   let html = "";
   // on affiche toutes les propriete
   let name = `<h3>${objetImage.nom}</h3>`;
