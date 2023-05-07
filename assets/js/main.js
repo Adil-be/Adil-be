@@ -1,7 +1,10 @@
+import { elements } from "./variables.js";
+import { reveal } from "./function.js";
+import { creationProject } from "./function.js";
+
 let Burger = document.querySelector("#burger");
 let navMobileContainer = document.querySelector(".navMobileContainer");
 let navMobile = document.querySelector("#navMobile");
-console.log(navMobile);
 
 Burger.onclick = () => {
   if (navMobileContainer.classList.contains("open")) {
@@ -16,7 +19,6 @@ Burger.onclick = () => {
     };
   }
 };
-
 function oppenMenu() {
   navMobileContainer.classList.add("open");
   Burger.classList.add("open");
@@ -27,3 +29,6 @@ function closeMenu() {
   Burger.classList.remove("open");
   document.body.style.overflow = "scroll";
 }
+
+window.onload = reveal();
+window.addEventListener("scroll", reveal);

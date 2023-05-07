@@ -14,7 +14,7 @@
             </script>
         </li>
         <li>
-            <a target="_blank" href="www.linkedin.com/in/adil-b-devweb"><i class="bi bi-linkedin"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/adil-b-devweb"><i class="bi bi-linkedin"></i></a>
         </li>
         <li>
             <a target="_blank" href="https://github.com/Adil-be"><i class="bi bi-github"></i></a>

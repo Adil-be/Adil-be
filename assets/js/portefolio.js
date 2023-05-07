@@ -9,24 +9,19 @@ console.log(selectContainer);
 
 createVignettes(elements);
 
-// cette fonction prend un tableau d'object en parametre et créer une balise <figure> pour chacun des objet du tableau, elle place aussi un ecouteur d'evenement sur la balise
-//ex :
-
-/* <figure>
-  <img src="img/animal1.jpg" alt="image animal 1">
-  <figcaption>animal 1</figcaption>
-</figure> */
-
 function createVignettes(listElements) {
   listElements.forEach(function (element, i) {
     // on creé la balise ainsi que le HTML
     let linkWrapper = document.createElement("a");
     linkWrapper.href = "#zone1";
     let vignette = document.createElement("figure");
-    vignette.classList = "vignette";
+    linkWrapper.classList = "vignette";
     vignette.id = `v${i}`;
-    vignette.innerHTML = `<img src="${element.image}"
-    alt="image ${element.nom}">
+    vignette.innerHTML = `
+    <div>
+      <img src="${element.image}" alt="image ${element.nom}">
+      <div class="projectWrapper"><i class="bi bi-eye-fill"></i></div>
+    </div>
     <figcaption>${element.nom}</figcaption>`;
 
     // au click on appelle la fonction qui mdifie la zone1 et affiche l'image
@@ -42,7 +37,9 @@ function createVignettes(listElements) {
 
 function afficherImage(objetImage) {
   zone1.style.backgroundImage = `url(${objetImage.image})`;
-  zone1.innerHTML = `<div><a href="${objetImage.path}" target="_blank"><i class="bi bi-eye-fill"></i></a></div>`;
+  zone1.innerHTML = `
+  <a href="${objetImage.path}" target="_blank"> 
+  </a>`;
   let html = "";
   // on affiche toutes les propriete
   let name = `<h3>${objetImage.nom}</h3>`;
@@ -51,17 +48,17 @@ function afficherImage(objetImage) {
   let color;
   objetImage.categories.forEach((categorie) => {
     switch (categorie) {
-      case "Js":
+      case "JS":
         color = "yellow";
         break;
-      case "Html":
+      case "HTML":
         color = "orange";
         break;
-      case "Css":
+      case "CSS":
         color = "blue";
         break;
       case "Bootstrap":
-        color = "red";
+        color = "purple";
         break;
     }
     categories += `<li class=${color}>${categorie}</li>`;
@@ -71,13 +68,6 @@ function afficherImage(objetImage) {
   html += `<a href=${objetImage.path} target="_blank" class="myBtn">Visiter</a>`;
   overlay.innerHTML = html;
 }
-
-// le but de cette fonction est de crée dinamiquement un element html select dont les option correspond au nombre de catégories du tableau Elements
-// ex :
-//<select>
-// <option value="1">value 1</otpion>
-//<option value="2"> value 2</otpion>
-//</select>
 
 createSelectHtmlElement();
 

@@ -1,0 +1,39 @@
+.animate {
+  position: relative;
+  visibility: hidden;
+}
+@keyframes slidein-left {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(710px);
+  }
+}
+
+.animation-left.active {
+  position: relative;
+  visibility: visible;
+  left: -710px;
+  animation: slidein-left 1s ease-in-out 0s forwards;
+}
+
+@keyframes slidein-right {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-710px);
+  }
+}
+
+.animation-right.active {
+  position: relative;
+  visibility: visible;
+  right: -710px;
+  animation: slidein-right 1s ease-in-out 0s forwards;
+}

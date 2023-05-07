@@ -4,26 +4,12 @@
 
 /* @import "normalize.css"; */
 @import "base.css";
+@import "animation.css";
 
 /* ****************
     FONT  
 ***************** */
-@font-face {
-  font-family: "Adam-Medium";
-  src: url(../fonts/Adam/Adam-Medium.ttf);
-}
-@font-face {
-  font-family: "Adam-Light";
-  src: url(../fonts/Adam/Adam-Light.ttf);
-}
-@font-face {
-  font-family: "Adam-Bold";
-  src: url(../fonts/Adam/Adam-Bold.ttf);
-}
-@font-face {
-  font-family: "Codex-Cold-Rgular";
-  src: url(../fonts/Codex/Codec-Cold-Regular-trial.ttf);
-}
+
 @font-face {
   font-family: "Hypereality";
   src: url(../fonts/Hyper/Hypereality\ Sans\ Serif.ttf);
@@ -32,10 +18,7 @@
   font-family: "data-control";
   src: url(../fonts/data-control/data-latin.ttf);
 }
-@font-face {
-  font-family: "semi-coder";
-  src: url(../fonts/semi-coder/Semi-Coder-Regular.otf);
-}
+
 @font-face {
   font-family: "fira";
   src: url(../fonts/fira-code/FiraCode-Regular.otf);
@@ -168,7 +151,7 @@ a {
 }
 
 .mainColor {
-  color: rgb(var(--cyan));
+  color: rgb(var(--cyan)) !important;
 }
 .secondaryColor {
   color: rgb(var(--lightBlue)) !important;
@@ -179,8 +162,8 @@ i {
   font-size: 3rem;
 }
 
-.red {
-  color: rgb(130, 0, 0);
+.purple {
+  color: rgb(154, 77, 248);
 }
 .blue {
   color: rgb(var(--lightBlue));
@@ -281,11 +264,6 @@ header {
   left: 0;
 }
 
-.navMobileContainer.open {
-  /* z-index: 3; */
-  display: block;
-}
-
 .navMobile {
   height: 100%;
   background-color: rgb(var(--darkBlue));
@@ -293,7 +271,7 @@ header {
   position: absolute;
   top: 0;
   right: 0;
-  width: 80%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -314,8 +292,7 @@ header {
     SECTION 
   ************** */
 #about,
-#Profil,
-#Portefolio {
+#Profil {
   max-width: 1000px;
   min-height: 700px;
   margin-left: auto;
@@ -324,7 +301,8 @@ header {
 }
 #about h2:before,
 #Profil h2:before,
-#Portefolio h2:before {
+#Portefolio h2:before,
+#contact h2:before {
   content: "\25A2";
   font-family: "semi-coder";
   color: rgb(var(--cyan));
@@ -364,6 +342,7 @@ header {
   ************** */
 
 #Profil #AccordionContent {
+  display: none;
   padding: 10px;
 }
 #Profil #AccordionContent h3 {
@@ -374,7 +353,9 @@ header {
   padding-left: 30px;
   margin-bottom: 10px;
 }
-
+#Profil #AccordionTab ul {
+  flex-wrap: wrap;
+}
 #Profil #AccordionTab li {
   cursor: pointer;
   width: max-content;
@@ -420,6 +401,7 @@ header {
 }
 
 #project #projectImg {
+  position: relative;
   margin: auto;
   width: 60%;
 }
@@ -468,6 +450,9 @@ footer {
   background: inherit;
   text-align: center;
 }
+.vignette figure > div {
+  position: relative;
+}
 .vignette img {
   width: 100%;
   /* border-radius: 15px 15px 0 0; */
@@ -500,10 +485,12 @@ footer {
   background-size: cover;
   background-position: center;
 }
-#zone1 > div {
+.projectWrapper {
+  width: 100%;
   display: none;
 }
-#zone1:hover > div {
+.vignette:hover .projectWrapper,
+#projectImg:hover .projectWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -515,6 +502,10 @@ footer {
   left: 0;
   background-color: rgba(var(--cyan), 0.3);
 }
+#zone1 a {
+  width: 100%;
+  height: 100%;
+}
 
 #zone1Container #overlay {
   display: flex;
@@ -523,6 +514,7 @@ footer {
   right: 0;
   bottom: 0;
   padding: 20px;
+  z-index: 4;
   flex-direction: column;
   justify-content: center;
   align-items: start;
@@ -558,6 +550,10 @@ footer {
   }
   .navDesktop {
     display: none;
+  }
+  .navMobileContainer.open {
+    /* z-index: 3; */
+    display: block;
   }
 }
 

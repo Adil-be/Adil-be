@@ -8,9 +8,9 @@ abstract class AbstractController
 {
     protected Page $page;
 
-    protected PDO $db;
+    protected ?PDO $db;
 
-    public function __construct(Page $page, PDO $db)
+    public function __construct(Page $page, PDO $db = null)
     {
         $this->db = $db;
         $this->page = $page;
