@@ -29,10 +29,4 @@ class Page
     {
         return $this->fileName;
     }
-
-    public function setPageName(?string $pageName): self
-    {
-        $this->pageName = $pageName;
-        return $this;
-    }
 }

@@ -292,19 +292,23 @@ header {
     SECTION 
   ************** */
 #about,
-#Profil {
-  max-width: 1000px;
+#Profil,
+#Portefolio,
+#Realisation {
+  max-width: 1200px;
   min-height: 700px;
   margin-left: auto;
   margin-right: auto;
   padding: 100px 0;
+}
+#Realisation {
+  padding: 0;
 }
 #about h2:before,
 #Profil h2:before,
 #Portefolio h2:before,
 #contact h2:before {
   content: "\25A2";
-  font-family: "semi-coder";
   color: rgb(var(--cyan));
   font-weight: bold;
   display: inline-block;
@@ -394,6 +398,7 @@ header {
 /* *************
     PROJECT
   ************** */
+
 #project {
   display: flex;
   gap: 50px;
@@ -417,7 +422,6 @@ header {
   padding: 20px;
   background-color: rgb(var(--darkBlue));
 }
-
 /* *************
     FOOTER
   ************** */
@@ -442,6 +446,7 @@ footer {
 /* *************
     Portefolio
   ************** */
+
 .vignette {
   cursor: pointer;
   width: 300px;

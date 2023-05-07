@@ -44,7 +44,9 @@ function afficherImage(objetImage) {
   // on affiche toutes les propriete
   let name = `<h3>${objetImage.nom}</h3>`;
   let description = `<p>${objetImage.description}</p>`;
-  let categories = `<ul class="d-flex gap-3">`;
+  let categories = `
+  <div><p>Languages:</p>
+  <ul class="d-flex gap-3">`;
   let color;
   objetImage.categories.forEach((categorie) => {
     switch (categorie) {
@@ -63,7 +65,7 @@ function afficherImage(objetImage) {
     }
     categories += `<li class=${color}>${categorie}</li>`;
   });
-  categories += `</ul>`;
+  categories += `</ul> </div>`;
   html = name + description + categories;
   html += `<a href=${objetImage.path} target="_blank" class="myBtn">Visiter</a>`;
   overlay.innerHTML = html;
