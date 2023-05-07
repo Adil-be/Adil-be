@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: beige;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+}
+.container {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(185, 75%, 39%);
+}
+
+.image_top {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transform: translateY(-50%);
+  left: -50%;
+}
+.image_bottom {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  transform: translateY(50%);
+  right: -50%;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  height: 370px;
+  background-color: white;
+  border-radius: 10px;
+}
+header {
+  position: relative;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 130px;
+}
+header > img {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.avatar_image {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+main {
+  text-align: center;
+  padding: 60px 0 20px 0;
+}
+h1 {
+  font-family: "Kumbh Sans", sans-serif;
+  color: hsl(229, 23%, 23%);
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+}
+p {
+  font-size: 18px;
+  color: rgb(90, 81, 81);
+}
+
+span {
+  color: rgb(90, 81, 81);
+  font-size: 16px;
+}
+.number {
+  color: black;
+  font-weight: 900;
+}
+.stats {
+  font-size: 12px;
+}
+
+footer {
+  display: flex;
+  border-top: 1px solid #eee;
+  justify-content: space-around;
+  padding: 30px;
+}
+.kpi {
+  text-align: center;
+  color: rgb(90, 81, 81);
+}
+
+.bottom .number {
+  font-weight: bold;
+}
