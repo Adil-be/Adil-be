@@ -79,7 +79,7 @@ export function creationProject(elements) {
     html += `
         <ul class="d-flex gap-4">
         <li>
-            <a href="${element.path}" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="${element.github}" target="_blank"><i class="bi bi-github"></i></a>
         </li>
         <li>
             <a href="${element.path}" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
@@ -89,7 +89,7 @@ export function creationProject(elements) {
     project.appendChild(projectContent);
     let projectImg = document.createElement("div");
     projectImg.id = "projectImg";
-    projectImg.innerHTML = `<a href="?page=portefolio">
+    projectImg.innerHTML = `<a href="${element.path}" target="_blank">
         <div class="projectWrapper"><i class="bi bi-eye-fill"></i></div>
         <img src="${element.image}" alt="${element.name}" />
     </a>`;

@@ -1,7 +1,7 @@
 export let elements = [
   {
     image: "assets/img/project/FEM_Rock_Paper_Scissor.jpg",
-    github: "",
+    github: "https://github.com/Adil-be/Rock-Paper-Scissors-game",
     path: "projects/rock-paper-scissors-master",
     nom: "FEM : Rock Paper Scissors",
     categories: ["JS", "HTML", "CSS"],
@@ -20,7 +20,7 @@ export let elements = [
   },
   {
     image: "assets/img/project/Cross_Fit.jpg",
-    github: "",
+    github: "https://github.com/Adil-be/CrossFit",
     path: "projects/FitClub",
     nom: "Front page site crossFit",
     categories: ["HTML", "CSS"],
