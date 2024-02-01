@@ -2,7 +2,7 @@ export function openTabContent(e) {
   let tabs = document.querySelectorAll("#AccordionTab li");
   let contents = document.querySelectorAll("#AccordionContent");
   let classcontent = e.dataset.classcontent;
-  console.log(e.dataset.classcontent);
+
   tabs.forEach((tab) => {
     tab.classList.remove("selected");
   });
@@ -11,9 +11,8 @@ export function openTabContent(e) {
   });
   e.classList.add("selected");
   let currentContent = document.querySelector(`.${classcontent}`);
-  console.log("CurrentContent ", currentContent);
+
   currentContent.style.display = "block";
-  currentContent.classList.add("test");
 }
 export function reveal() {
   let reveals = document.querySelectorAll(".animate");
@@ -48,7 +47,7 @@ export function creationProject(elements) {
       project.classList.add("reverse");
     }
     let projectContent = document.createElement("div");
-    projectContent.id = "projectContent";
+    projectContent.className = "projectContent";
     let html;
 
     html = `
@@ -67,6 +66,15 @@ export function creationProject(elements) {
           break;
         case "CSS":
           color = "blue";
+          break;
+        case "PHP":
+          color = "indigo";
+          break;
+        case "Symfony":
+          color = "indigo";
+          break;
+        case "Angular":
+          color = "red";
           break;
         case "Bootstrap":
           color = "purple";
@@ -88,7 +96,7 @@ export function creationProject(elements) {
     projectContent.innerHTML = html;
     project.appendChild(projectContent);
     let projectImg = document.createElement("div");
-    projectImg.id = "projectImg";
+    projectImg.className = "projectImg";
     projectImg.innerHTML = `<a href="${element.path}" target="_blank">
         <div class="projectWrapper"><i class="bi bi-eye-fill"></i></div>
         <img src="${element.image}" alt="${element.name}" />

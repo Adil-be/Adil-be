@@ -164,6 +164,13 @@ i {
 .orange {
   color: rgb(255, 128, 0);
 }
+.red{
+  color: rgb(221, 27, 22)
+}
+
+.indigo{
+  color: rgb(120, 124, 181)
+}
 
 /* **************
    HEADER
@@ -392,15 +399,15 @@ header {
 #project {
   display: flex;
   gap: 50px;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
-#project #projectImg {
+#project .projectImg {
   position: relative;
   margin: auto;
   width: 60%;
 }
-#project #projectContent {
+#project .projectContent {
   display: flex;
   gap: 10px;
   flex-direction: column;
@@ -408,7 +415,7 @@ header {
   align-items: start;
   width: 40%;
 }
-#project #projectContent p {
+#project .projectContent p {
   padding: 20px;
   background-color: rgb(var(--darkBlue));
 }
@@ -424,13 +431,13 @@ footer {
   #project.reverse {
     flex-direction: row-reverse;
   }
-  #project.reverse #projectContent {
+  #project.reverse .projectContent {
     text-align: right;
     align-items: end;
   }
 }
 
-#project #projectImg img {
+#project .projectImg img {
   width: 100%;
 }
 
@@ -486,7 +493,7 @@ footer {
   display: none;
 }
 .vignette:hover .projectWrapper,
-#projectImg:hover .projectWrapper {
+.projectImg:hover .projectWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -562,14 +569,14 @@ footer {
     gap: 20px;
   }
 
-  #project #projectContent {
+  #project .projectContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
-  #project #projectImg {
+  #project .projectImg {
     width: 80%;
   }
   #zone1Container #overlay {
