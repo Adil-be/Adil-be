@@ -1,6 +1,4 @@
-import { elements } from "./variables.js";
 import { reveal } from "./function.js";
-import { creationProject } from "./function.js";
 
 let Burger = document.querySelector("#burger");
 let navMobileContainer = document.querySelector(".navMobileContainer");

@@ -16,7 +16,7 @@ export function openTabContent(e) {
   currentContent.classList.add("test");
 }
 export function reveal() {
-  var reveals = document.querySelectorAll(".animate");
+  let reveals = document.querySelectorAll(".animate");
 
   reveals.forEach((element, i) => {
     if (i % 2 == 0) {
@@ -26,10 +26,10 @@ export function reveal() {
     }
   });
 
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 200;
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 200;
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
@@ -59,17 +59,17 @@ export function creationProject(elements) {
     let color;
     element.categories.forEach((categorie) => {
       switch (categorie) {
-        case "Js":
+        case "JS":
           color = "yellow";
           break;
-        case "Html":
+        case "HTML":
           color = "orange";
           break;
-        case "Css":
+        case "CSS":
           color = "blue";
           break;
         case "Bootstrap":
-          color = "red";
+          color = "purple";
           break;
       }
       list += `<li class=${color}>${categorie}</li>`;

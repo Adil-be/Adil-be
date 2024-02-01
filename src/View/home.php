@@ -22,11 +22,10 @@
     <section id="about" class="animate">
         <h2>A propos</h2>
         <div class="row my-5">
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-md-7 my-auto">
                 <p>
-                    <strong class="mainColor">Passionné par le code</strong> , j'ai
-                    debuter mon apprendrentissage en ligne sur mon temps libre grace à
-                    de nombreux sites tel que
+                    <strong class="mainColor">Passionné par le code </strong>, j'ai débuté mon apprentissage en ligne
+                    sur mon temps libre grâce à de nombreux sites tels que
                     <a href="https://openclassrooms.com/courses" target="_blank"
                         class="secondaryColor fst-italic">openclassroom</a>
                     et
@@ -34,17 +33,16 @@
                         class="secondaryColor fst-italic">grafikart</a>.
                 </p>
                 <p>
-                    A 29 ans, après avoir travaillé plusieurs années dans la
-                    logistique, j'ai décidé de me
-                    <strong class="mainColor">reconvertir professionnellement</strong>.
+                    À 29 ans, après avoir travaillé plusieurs années dans la logistique, j'ai décidé de me <strong
+                        class="mainColor">reconvertir professionnellement.
+                    </strong>.
                 </p>
                 <p>
-                    Actuellement en
-                    <strong class="mainColor">formation developpeur Web</strong> chez
+                    Diplômé à l'issue de la
+                    <strong class="mainColor">formation développeur Web</strong> chez
                     <a href="https://humanbooster.com/programmes/developpeur-web-et-web-mobile/" target="_blank"
-                        class="secondaryColor">HumanBooster</a>
-                    afin d'acquerir des connaissances et de travailler dans l'univers
-                    du web en tant que developpeur.
+                        class="secondaryColor">HumanBooster</a>, je suis, plus que jamais, désireux d'acquérir des
+                    connaissances et de travailler dans l'univers du web en tant que développeur.
                 </p>
             </div>
             <div id="ImageProfilWrapper" class="offset-2 col-8 col-md-4 offset-md-1">
@@ -201,9 +199,10 @@
     <section id="contact" class="text-center animate">
         <h2>Contact</h2>
         <p>
-            Actuellement en recherche de stage debut septembre <br />
-            Ouvert à la discussion, n'hesiter pas dire bonjour. <br />Pour tout
-            echange mon mail est a disposition ci-desous.<br />&#127850;
+            Actuellement en <strong class="mainColor">recherche d'alternance</strong>, disponible
+            immédiatement.<br /><br />
+            Ouvert à la discussion, n'hésitez pas à dire bonjour. <br /><br />
+            Pour tout échange, mon mail est à disposition ci-dessous.<br /><br />&#127850;
         </p>
         <script>
             let name = "a.benyahia69";

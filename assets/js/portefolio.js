@@ -13,7 +13,7 @@ function createVignettes(listElements) {
   listElements.forEach(function (element, i) {
     // on creé la balise ainsi que le HTML
     let linkWrapper = document.createElement("a");
-    linkWrapper.href = "#zone1";
+    linkWrapper.href = "#Realisation";
     let vignette = document.createElement("figure");
     linkWrapper.classList = "vignette";
     vignette.id = `v${i}`;

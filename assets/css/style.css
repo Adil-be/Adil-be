@@ -1,8 +1,6 @@
 /* ****************
     IMPORT  
 ***************** */
-
-/* @import "normalize.css"; */
 @import "base.css";
 @import "animation.css";
 
@@ -54,19 +52,18 @@
 
 html,
 body {
+  overflow-x: hidden;
   position: relative;
-  width: 100%;
+  width: 100vw;
   min-height: 100%;
 }
 
 body {
-  /* font-family: "data-control"; */
   font-family: "fira";
-  /* font-family: "semi-coder"; */
   line-height: 130%;
   font-weight: 400;
   background: rgb(var(--DarkGray));
-  font-size: clamp(16px, 2vw, 18px);
+  font-size: clamp(18px, 2vw, 20px);
   color: var(--white);
 }
 
@@ -87,15 +84,12 @@ h2 {
 }
 
 h3 {
-  font-family: "hypereality";
   color: white;
-  font-weight: 600;
-  font-size: clamp(20px, 2vw, 30px);
 }
 
-h4 {
+h4,
+h3 {
   font-family: "hypereality";
-  /* font-family: "semi-coder"; */
   font-weight: 600;
   font-size: clamp(20px, 2vw, 25px);
 }
@@ -121,10 +115,6 @@ nav ul li:hover:after {
   left: 0;
   height: 1px;
   background: rgb(var(--cyan));
-}
-
-a {
-  box-sizing: border-box;
 }
 
 /* **************
@@ -317,7 +307,7 @@ header {
 }
 
 #contact {
-  margin: 150px 0 200px 0;
+  margin: 100px 0;
 }
 /* *************
     BANNER
@@ -426,7 +416,8 @@ header {
     FOOTER
   ************** */
 footer {
-  padding: 20px;
+  margin-top: 50px;
+  padding: 40px;
 }
 
 @media (min-width: 768px) {
