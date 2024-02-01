@@ -25,7 +25,7 @@ export let elements = [
     nom: "Front page site crossFit",
     categories: ["HTML", "CSS"],
     description:
-      "Réalisé durant ma formation Devellopeur Web dans le cadre d'un module HTML/CSS, Basé sur un model fournit par notre formatrice <a class='mainColor' target='_blank' href='https://audreyhossepian.fr/'>Aaudrey Hossepian</a>",
+      "Réalisé durant ma formation Devellopeur Web dans le cadre d'un module HTML/CSS, Basé sur un model fournit par notre formatrice <a class='mainColor' target='_blank' href='https://audreyhossepian.fr/'>Audrey Hossepian</a>",
   },
   {
     image: "assets/img/project/FEM_Product_Card.jpg",
