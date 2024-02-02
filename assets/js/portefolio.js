@@ -62,6 +62,12 @@ function afficherImage(objetImage) {
       case "Bootstrap":
         color = "purple";
         break;
+      case "Symfony":
+        color = "indigo";
+        break;
+      case "Angular":
+        color = "red";
+        break;
     }
     categories += `<li class=${color}>${categorie}</li>`;
   });

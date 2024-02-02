@@ -1,5 +1,14 @@
 export let elements = [
   {
+    image: "assets/img/project/Create_Your_Avatar.jpg",
+    github: "https://github.com/Adil-be/CreateYourAvatar_Front_End",
+    path: "http://createyouravatar.fr",
+    nom: "Create Your Avatar",
+    categories: ["Angular", "Symfony", "Bootstrap"],
+    description:
+      "Application développée intégralement en Angular et Bootstrap avec l’utilisation d’une API faite en Symfony pour les données de la plateforme. L’inscription ainsi que l’authentification de l’utilisateur sont géré grâce à un jeton JWT",
+  },
+  {
     image: "assets/img/project/FEM_Rock_Paper_Scissor.jpg",
     github: "https://github.com/Adil-be/Rock-Paper-Scissors-game",
     path: "projects/rock-paper-scissors-master",
@@ -7,6 +16,15 @@ export let elements = [
     categories: ["JS", "HTML", "CSS"],
     description:
       "Ma solution au challenge front-ent-Mentor <a class='mainColor' target='_blank' href='https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH'>Rock, Paper, Scissors game</a>. ",
+  },
+  {
+    image: "assets/img/project/Cross_Fit.jpg",
+    github: "https://github.com/Adil-be/CrossFit",
+    path: "projects/FitClub",
+    nom: "Front page site crossFit",
+    categories: ["HTML", "CSS"],
+    description:
+      "Réalisé durant ma formation Devellopeur Web dans le cadre d'un module HTML/CSS, Basé sur un model fournit par notre formatrice <a class='mainColor' target='_blank' href='https://audreyhossepian.fr/'>Audrey Hossepian</a>",
   },
   {
     image: "assets/img/project/FEM-Form.jpg",
@@ -17,15 +35,6 @@ export let elements = [
     categories: ["JS", "HTML", "CSS"],
     description:
       "Ma solution au challenge front-ent-Mentor <a class='mainColor' target='_blank' href='https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1'>Intro component with sign-up form</a>",
-  },
-  {
-    image: "assets/img/project/Cross_Fit.jpg",
-    github: "https://github.com/Adil-be/CrossFit",
-    path: "projects/FitClub",
-    nom: "Front page site crossFit",
-    categories: ["HTML", "CSS"],
-    description:
-      "Réalisé durant ma formation Devellopeur Web dans le cadre d'un module HTML/CSS, Basé sur un model fournit par notre formatrice <a class='mainColor' target='_blank' href='https://audreyhossepian.fr/'>Audrey Hossepian</a>",
   },
   {
     image: "assets/img/project/FEM_Product_Card.jpg",
