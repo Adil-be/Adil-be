@@ -37,7 +37,7 @@ Désireux d’exercer un emploi dans lequel je pourrai pleinement exploiter ma c
   plateform de creation de nft  
   repo Back-end : [https://github.com/Adil-be/CreateYourAvatar_Back_End](https://github.com/Adil-be/CreateYourAvatar_Back_End)  
   repo Front-End : [https://github.com/Adil-be/CreateYourAvatar_Front_End](https://github.com/Adil-be/CreateYourAvatar_Front_End)  
-  Deployment : [www.createYourAvatar.fr](www.createYourAvatar.fr)  
+  Deployment : [www.createYourAvatar.fr](http://www.createYourAvatar.fr)  
 - PuggLife:  
   Plateforme d'adoption de chien  
   repo :[https://github.com/Adil-be/PuggLife](https://github.com/Adil-be/PuggLife)  
