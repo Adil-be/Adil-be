@@ -25,3 +25,9 @@ Désireux d’exercer un emploi dans lequel je pourrai pleinement exploiter ma c
 - MySQL
 
 ## Mes centres d'intérets
+
+- Sports de combats : Les sports de combat m'ont enseigné  respect de soi et des autres.
+- Podcast technologique: J'aime écouter des podcasts de vulgarisation scientifiques.
+- Course à pied:
+Je cours de manière régulière 2 fois  
+par semaine afin de me défouler
