@@ -3,7 +3,7 @@
 ![adel benyahia](https://adel-b.fr/assets/img/content/ImageProfil.png)
 
 
-Mon site portefolio ➡ [adel-b.fr](https://www.adel-b.fr).
+Mon site portefolio ➡ [adel-b.fr](https://www.adel-b.fr).  
 
 En recherche d’alternance, disponible immédiatement
 
@@ -16,9 +16,11 @@ Désireux d’exercer un emploi dans lequel je pourrai pleinement exploiter ma c
 
 ## Mes compétences
 
-- Maquettage
+- Maquettage: Figma
 - WordPress: OxygenBulder, Elementor builder
-- Création Bdd 
+- Api Platform.
+- Création Bdd.
+- Creation de site: Développement Front-end, Développement Front-end, Développement Api.
 
 ## languages 
 
@@ -28,6 +30,18 @@ Désireux d’exercer un emploi dans lequel je pourrai pleinement exploiter ma c
 - JavaScript
 - Angular
 - MySQL
+
+## Principaux Projet
+
+- Create Your Avatar:  
+  plateform de creation de nft
+  repo Back-end : [https://github.com/Adil-be/CreateYourAvatar_Back_End](https://github.com/Adil-be/CreateYourAvatar_Back_End)
+  repo Front-End : [https://github.com/Adil-be/CreateYourAvatar_Front_End](https://github.com/Adil-be/CreateYourAvatar_Front_End)
+  Deployment : [www.createYourAvatar.fr](www.createYourAvatar.fr)
+- PuggLife:
+  Plateforme d'adoption de chien
+  repo :[https://github.com/Adil-be/PuggLife](https://github.com/Adil-be/PuggLife)
+
 
 ## Mes centres d'intérets
 
