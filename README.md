@@ -3,7 +3,9 @@
 ![adel benyahia](https://adel-b.fr/assets/img/content/ImageProfil.png)
 
 
-Mon site portefolio ➡ [adel-b.fr](https://www.adel-b.fr)
+Mon site portefolio ➡ [adel-b.fr](https://www.adel-b.fr).
+
+En recherche d’alternance, disponible immédiatement
 
 ## mes infos personnelles
 
